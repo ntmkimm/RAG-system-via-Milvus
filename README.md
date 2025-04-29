@@ -33,7 +33,12 @@ pip install langchain_milvus
 ### Pretrained models
 Models is auto download via Hugging face hub or you can manually download the models (`Alibaba-NLP/gte-Qwen2-1.5B-instruct` and `Qwen/Qwen2.5-1.5B-Instruct`)
 
-### Setting Up Milvus and Upload database
+## Configuration (Optional)
+- **Document Folder Path:** In the code, set the path to the folder containing the `.txt` files.
+- **Model Settings:** Modify the model names (`embed_model`, `llm_model`) based on your needs.
+- **Hybrid Search:** Set `hybrid = True` in the `DatabaseMilvus` constructor to enable BM25 hybrid search.
+
+## Setting Up Milvus and Upload database
 
 Install Milvus and start the server on your machine. You can follow the [Milvus installation guide](https://milvus.io/docs/install_standalone-docker.md).
 Ensure the Milvus server is running at the specified host and port.
@@ -43,7 +48,7 @@ CUDA_VISIBLE_DEVICES=0,1 python core.py
 ```
 3. The system will load the documents, split them, embed them, and store them in the Milvus database. After that, it will be ready for querying the system.
 
-### Running the System
+## Running the System
 Start the system:
 
 ```bash
@@ -58,15 +63,4 @@ Input query: "Can I park at X university?"
 
 The system will retrieve relevant documents and use the `Qwen` model to generate a precise answer.
 
-## Configuration
 
-- **Document Folder Path:** In the code, set the path to the folder containing the `.txt` files.
-- **Model Settings:** Modify the model names (`embed_model`, `llm_model`) based on your needs.
-- **Hybrid Search:** Set `hybrid = True` in the `DatabaseMilvus` constructor to enable BM25 hybrid search.
-
-
-## Acknowledgments
-
-- **Milvus**: For efficient vector storage and retrieval.
-- **LangChain**: For the chaining of language models, document retrieval, and prompt handling.
-- **HuggingFace Transformers**: For pre-trained models used for embeddings and question answering.
