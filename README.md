@@ -46,7 +46,7 @@ Set 'hybrid=True' if you want to use BM25 for searching.
 ```bash
 CUDA_VISIBLE_DEVICES=0,1 python core.py
 ```
-3. The system will load the documents, split them, embed them, and store them in the Milvus database. After that, it will be ready for querying the system.
+The system will load the documents, split them, embed them, and store them in the Milvus database. After that, it will be ready for querying the system.
 
 ## Running the System
 Start the system:
