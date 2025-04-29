@@ -33,7 +33,7 @@ pip install langchain_milvus
 ### Pretrained models
 Models is auto download via Hugging face hub or you can manually download the models (`Alibaba-NLP/gte-Qwen2-1.5B-instruct` and `Qwen/Qwen2.5-1.5B-Instruct`)
 
-## Configuration (Optional)
+### Configuration (Optional)
 - **Document Folder Path:** In the code, set the path to the folder containing the `.txt` files.
 - **Model Settings:** Modify the model names (`embed_model`, `llm_model`) based on your needs.
 - **Hybrid Search:** Set `hybrid = True` in the `DatabaseMilvus` constructor to enable BM25 hybrid search.
