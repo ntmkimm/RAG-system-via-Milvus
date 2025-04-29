@@ -38,6 +38,15 @@ Models is auto download via Hugging face hub or you can manually download the mo
 - **Model Settings:** Modify the model names (`embed_model`, `llm_model`) based on your needs.
 - **Hybrid Search:** Set `hybrid = True` in the `DatabaseMilvus` constructor to enable BM25 hybrid search.
 
+## Project Structure
+
+| File                         | Description                                        |
+|-------------------------------|----------------------------------------------------|
+| `core.py`                     | Upload `txt` documents to Milvus database.   |
+| `eval_system.py`              | Eval system for Document Search and Answering (not completed)    |
+| `system.py` | System for Document Search and Answering    |
+| `/data`                      | Directory contains `txt` policy documents           |
+
 ## Setting Up Milvus and Upload database
 
 Install Milvus and start the server on your machine. You can follow the [Milvus installation guide](https://milvus.io/docs/install_standalone-docker.md).
